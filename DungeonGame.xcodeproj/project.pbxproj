@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C139233A180470B000AE93D7 /* Room.m in Sources */ = {isa = PBXBuildFile; fileRef = C1392339180470B000AE93D7 /* Room.m */; };
 		C1FAE04F18032D3500AFA2DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FAE04E18032D3500AFA2DB /* UIKit.framework */; };
 		C1FAE05118032D3500AFA2DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FAE05018032D3500AFA2DB /* Foundation.framework */; };
 		C1FAE05318032D3500AFA2DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1FAE05218032D3500AFA2DB /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C1392338180470B000AE93D7 /* Room.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Room.h; sourceTree = "<group>"; };
+		C1392339180470B000AE93D7 /* Room.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Room.m; sourceTree = "<group>"; };
 		C1FAE04B18032D3500AFA2DB /* DungeonGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1FAE04E18032D3500AFA2DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C1FAE05018032D3500AFA2DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,6 +89,8 @@
 		C1FAE05418032D3500AFA2DB /* DungeonGame */ = {
 			isa = PBXGroup;
 			children = (
+				C1392338180470B000AE93D7 /* Room.h */,
+				C1392339180470B000AE93D7 /* Room.m */,
 				C1FAE05D18032D3500AFA2DB /* DungeonGameAppDelegate.h */,
 				C1FAE05E18032D3500AFA2DB /* DungeonGameAppDelegate.m */,
 				C1FAE06618032D3500AFA2DB /* MainStoryboard.storyboard */,
@@ -183,6 +188,7 @@
 				C1FAE05F18032D3500AFA2DB /* DungeonGameAppDelegate.m in Sources */,
 				C1FAE06B18032D3500AFA2DB /* DungeonGameViewController.m in Sources */,
 				C1FAE073180332D100AFA2DB /* DungeonGameMapController.m in Sources */,
+				C139233A180470B000AE93D7 /* Room.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +311,7 @@
 				C1FAE07018032D3500AFA2DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
