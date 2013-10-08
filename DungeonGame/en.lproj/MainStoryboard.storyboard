@@ -1,26 +1,140 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--Dungeon Game View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="DungeonGameViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Dungeoneering" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSi-wG-6Hq">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="H7B-f3-Caj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uB-ot-wDr">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9rn-Ve-MKK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Enter the Dungeon!">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="rbm-gK-g89" kind="modal" id="SFz-zd-aBp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What is your name?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6B3-Xa-DEH">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="195" id="g9b-KC-BrC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nameRecieve:" destination="2" eventType="editingDidEndOnExit" id="8Tf-SI-tEc"/>
+                                </connections>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6B3-Xa-DEH" firstAttribute="top" secondItem="WSi-wG-6Hq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1dk-Gj-nDJ"/>
+                            <constraint firstAttribute="trailing" secondItem="WSi-wG-6Hq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="MOn-kp-Bgz"/>
+                            <constraint firstItem="9uB-ot-wDr" firstAttribute="leading" secondItem="6B3-Xa-DEH" secondAttribute="leading" type="default" id="Xuw-oJ-Pfa"/>
+                            <constraint firstAttribute="bottom" secondItem="9uB-ot-wDr" secondAttribute="bottom" constant="145" id="lHi-qa-3jL"/>
+                            <constraint firstItem="WSi-wG-6Hq" firstAttribute="top" secondItem="3" secondAttribute="top" constant="34" id="lfL-Jl-Fal"/>
+                            <constraint firstItem="WSi-wG-6Hq" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="sTx-hL-uEz"/>
+                            <constraint firstItem="9uB-ot-wDr" firstAttribute="trailing" secondItem="6B3-Xa-DEH" secondAttribute="trailing" type="default" id="xKD-rQ-y8J"/>
+                            <constraint firstItem="6B3-Xa-DEH" firstAttribute="centerX" secondItem="WSi-wG-6Hq" secondAttribute="centerX" type="default" id="yfN-bP-4Av"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="6B3-Xa-DEH" id="jFU-fl-t8s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="104" y="149"/>
+        </scene>
+        <!--View Controller - Inventory-->
+        <scene sceneID="l1z-zY-Y3p">
+            <objects>
+                <viewController id="0IX-QF-YTO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zP7-ca-OAV">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Inventory" id="YBl-O2-WGz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JTP-fj-keO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="487"/>
+        </scene>
+        <!--Dungeon Game Map Controller - Dungeon-->
+        <scene sceneID="9QD-Mw-pEO">
+            <objects>
+                <viewController id="3pv-Hv-tnH" customClass="DungeonGameMapController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E8A-w6-v8C" customClass="DungeonGameMapCotnroller">
+                        <rect key="frame" x="0.0" y="20" width="320" height="411"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dungeon" id="yLk-3p-4DT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ln-I6-VXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="-166"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="uPC-dw-GRg">
+            <objects>
+                <tabBarController definesPresentationContext="YES" id="rbm-gK-g89" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="DdN-Gk-K0p">
+                        <rect key="frame" x="129" y="330" width="163" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3pv-Hv-tnH" kind="relationship" relationship="viewControllers" id="BQP-mr-bLa"/>
+                        <segue destination="0IX-QF-YTO" kind="relationship" relationship="viewControllers" id="eyQ-yi-6NU"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Tn-G8-Ldb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="503" y="342"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="DungeonGameMapController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DungeonGameMapController.h"/>
+        </class>
+        <class className="DungeonGameViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DungeonGameViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="nameRecieve:" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="nameField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>

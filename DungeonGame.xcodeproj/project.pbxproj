@@ -18,6 +18,7 @@
 		C1FAE06518032D3500AFA2DB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C1FAE06418032D3500AFA2DB /* Default-568h@2x.png */; };
 		C1FAE06818032D3500AFA2DB /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1FAE06618032D3500AFA2DB /* MainStoryboard.storyboard */; };
 		C1FAE06B18032D3500AFA2DB /* DungeonGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FAE06A18032D3500AFA2DB /* DungeonGameViewController.m */; };
+		C1FAE073180332D100AFA2DB /* DungeonGameMapController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1FAE072180332D100AFA2DB /* DungeonGameMapController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		C1FAE06718032D3500AFA2DB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C1FAE06918032D3500AFA2DB /* DungeonGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DungeonGameViewController.h; sourceTree = "<group>"; };
 		C1FAE06A18032D3500AFA2DB /* DungeonGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DungeonGameViewController.m; sourceTree = "<group>"; };
+		C1FAE071180332D100AFA2DB /* DungeonGameMapController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DungeonGameMapController.h; sourceTree = "<group>"; };
+		C1FAE072180332D100AFA2DB /* DungeonGameMapController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DungeonGameMapController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				C1FAE06618032D3500AFA2DB /* MainStoryboard.storyboard */,
 				C1FAE06918032D3500AFA2DB /* DungeonGameViewController.h */,
 				C1FAE06A18032D3500AFA2DB /* DungeonGameViewController.m */,
+				C1FAE071180332D100AFA2DB /* DungeonGameMapController.h */,
+				C1FAE072180332D100AFA2DB /* DungeonGameMapController.m */,
 				C1FAE05518032D3500AFA2DB /* Supporting Files */,
 			);
 			path = DungeonGame;
@@ -177,6 +182,7 @@
 				C1FAE05B18032D3500AFA2DB /* main.m in Sources */,
 				C1FAE05F18032D3500AFA2DB /* DungeonGameAppDelegate.m in Sources */,
 				C1FAE06B18032D3500AFA2DB /* DungeonGameViewController.m in Sources */,
+				C1FAE073180332D100AFA2DB /* DungeonGameMapController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
