@@ -9,5 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @interface Room : NSObject
--(void)addRoom:(NSString*)name addX:(NSUInteger)xpos addY:(NSUInteger)ypos addInfo:(NSString*)info northDoor:(BOOL)N southDoor:(BOOL)S westDoor:(BOOL)W eastDoor:(BOOL)E;
+
+@property (nonatomic) NSUInteger *xpos;
+@property (nonatomic) NSUInteger *ypos;
+
+@property (strong, nonatomic) NSString *roomName;
+@property (strong, nonatomic) NSString *description;
+
+@property (nonatomic) BOOL *doorN;
+@property (nonatomic) BOOL *doorS;
+@property (nonatomic) BOOL *doorW;
+@property (nonatomic) BOOL *doorE;
+
 @end

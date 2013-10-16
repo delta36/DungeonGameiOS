@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Room.h"
 
 @interface DungeonGameMapController : UIViewController
 
