@@ -10,15 +10,6 @@
 
 @interface Room : NSObject
 
-@property (nonatomic) NSUInteger *xpos;
-@property (nonatomic) NSUInteger *ypos;
-
-@property (strong, nonatomic) NSString *roomName;
-@property (strong, nonatomic) NSString *description;
-
-@property (nonatomic) BOOL *doorN;
-@property (nonatomic) BOOL *doorS;
-@property (nonatomic) BOOL *doorW;
-@property (nonatomic) BOOL *doorE;
+-(id) initWithName: (NSString*)name andDescription: (NSString*)description andXPos: (int)x andYPos: (int)y andDoorN: (BOOL)n andDoorS: (BOOL)s andDoorE: (BOOL)e andDoorW: (BOOL)w;
 
 @end
