@@ -26,7 +26,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view. 
+	// Do any additional setup after loading the view.
+    Room *testRoom = [[Room alloc] initWithName: @"test room" andDescription:@"This is an empty test room" andXPos:0 andYPos:0 andDoorN:1 andDoorS:0 andDoorE:0 andDoorW:0];
+    if (testRoom.checkDoorN == 1) {
+        NSLog(@"There is a north door in this room");
+    }
+    else {
+        NSLog(@"This room does not have a north door");
+    }
 }
 
 - (void)didReceiveMemoryWarning

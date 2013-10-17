@@ -10,6 +10,8 @@
 
 @interface Room : NSObject
 
--(id) initWithName: (NSString*)name andDescription: (NSString*)description andXPos: (int)x andYPos: (int)y andDoorN: (BOOL)n andDoorS: (BOOL)s andDoorE: (BOOL)e andDoorW: (BOOL)w;
+-(id) initWithName: (NSString*)name andDescription: (NSString*)description andXPos: (NSUInteger*)x andYPos: (NSUInteger*)y andDoorN: (NSUInteger*)n andDoorS: (NSUInteger*)s andDoorE: (NSUInteger*)e andDoorW: (NSUInteger*)w;
+
+-(BOOL) checkDoorN;
 
 @end
